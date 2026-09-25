@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=qdQpy48X3Rjv&format=png&color=000000">
+    <title>Web Projects</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f5f7;
+            color: #222;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 40px;
+        }
+
+        .projects {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .project {
+            width: 140px;
+            height: 80px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: white;
+            color: #222;
+
+            border: 1px solid #ddd;
+            border-radius: 12px;
+
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .disabled {
+            color: #aaa;
+            background: #e8e9eb;
+            cursor: default;
+        }
+
+        .disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .home {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+
+            padding: 12px 20px;
+
+            background: #222;
+            color: white;
+
+            border-radius: 9px;
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .home:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../../index.html" class="home">
+        ← Home
+    </a>
+
+    <div class="container">
+
+        <h1>Web Projects</h1>
+
+        <div class="projects">
+
+            <a href="Lab1/index.html" class="project">
+                Project 1
+            </a>
+
+            <div class="project disabled">
+                Project 2
+            </div>
+
+            <div class="project disabled">
+                Project 3
+            </div>
+
+            <div class="project disabled">
+                Project 4
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
