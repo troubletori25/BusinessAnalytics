@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2</title>    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .section {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid gray;
+            border-radius: 15px;
+        }
+
+        button, select {
+            padding: 8px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button[data-color="gray"] {
+            background-color: gray;
+            color: white;
+        }
+
+        button[data-color="red"] {
+            background-color: red;
+            color: white;
+        }
+
+        button[data-color="blue"] {
+            background-color: blue;
+            color: white;
+        }
+
+        button[data-color="green"] {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>JavaScript Events and Dropdown</h1>
+
+        <div class="section">
+            <h2>1. Change Color with Buttons</h2>
+
+            <h1 id="hello1">Hello!</h1>
+
+            <button class="color-change" data-color="gray">Gray</button>
+            <button class="color-change" data-color="red">Red</button>
+            <button class="color-change" data-color="blue">Blue</button>
+            <button class="color-change" data-color="green">Green</button>
+        </div>
+
+        <div class="section">
+            <h2>2. Change Color with Dropdown</h2>
+
+            <h1 id="hello2">Hello!</h1>
+
+            <select id="color-change">
+                <option value="gray">Gray</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.color-change').forEach(button => {
+          button.onclick = () => {
+            document.querySelector('#hello1').style.color =
+              button.dataset.color;
+            };
+        });
+
+        document.querySelector('#color-change').onchange = function() {
+          document.querySelector('#hello2').style.color = this.value;
+        };
+    </script>
+
+</body>
+</html>
