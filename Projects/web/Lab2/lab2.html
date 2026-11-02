@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 2</title>    
+    <title>Lab 2</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,7 +56,7 @@
             background-color: green;
             color: white;
         }
-        
+
         .back-button {
             position: fixed;
             top: 20px;
@@ -77,8 +77,9 @@
 </head>
 
 <body>
-    <a href="../web.html" class="back-button"> ← Back to Web </a>
-    
+
+    <a href="../web.html" class="back-button">← Back to Web</a>
+
     <div class="container">
         <h1>JavaScript Events and Dropdown</h1>
 
@@ -109,14 +110,14 @@
 
     <script>
         document.querySelectorAll('.color-change').forEach(button => {
-          button.onclick = () => {
-            document.querySelector('#hello1').style.color =
-              button.dataset.color;
+            button.onclick = () => {
+                document.querySelector('#hello1').style.color =
+                    button.dataset.color;
             };
         });
 
         document.querySelector('#color-change').onchange = function() {
-          document.querySelector('#hello2').style.color = this.value;
+            document.querySelector('#hello2').style.color = this.value;
         };
     </script>
 

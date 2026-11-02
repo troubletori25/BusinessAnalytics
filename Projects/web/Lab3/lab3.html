@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a href="../web.html" class="back-button">← Back to Web</a>
+    
+    <main class="app">
+
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">TASK MANAGEMENT</p>
+                <h1>My to-do list</h1>
+                <p class="subtitle">
+                    Small steps every day lead to big results
+                </p>
+            </div>
+
+            <div class="date-card">
+                <span class="date-label">TODAY</span>
+                <strong id="today"></strong>
+            </div>
+        </header>
+
+
+        <form id="task-form" class="task-form">
+
+            <input
+                id="task"
+                type="text"
+                placeholder="For example, to prepare a laboratory assignment..."
+                autocomplete="off"
+                autofocus
+            >
+
+            <button id="submit" type="submit" disabled>
+                Add <span>+</span>
+            </button>
+
+        </form>
+
+
+        <section class="task-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Active tasks</h2>
+                    <p>What remains to be done</p>
+                </div>
+
+                <span class="counter" id="active-count">0</span>
+            </div>
+
+            <ul id="tasks" class="task-list">
+            </ul>
+
+        </section>
+
+
+        <section class="task-section completed-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Accomplished tasks</h2>
+                    <p>It’s already done. There’s something to be proud of!</p>
+                </div>
+
+                <span class="counter completed-counter" id="completed-count">0</span>
+            </div>
+
+            <ul id="completed-tasks" class="task-list">
+            </ul>
+
+        </section>
+
+
+        <footer class="app-footer">
+            <span>TO-DO LIST | JAVASCRIPT ES6</span>
+        </footer>
+
+    </main>
+
+</body>
+</html>
